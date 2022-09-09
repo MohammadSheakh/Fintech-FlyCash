@@ -18,7 +18,6 @@ class AdminsTableSeeder extends Seeder
     public function run()
     {
         DB::table('admins')->insert([
-            'id' => 3,
             'name' => 'Faiyaz Shahrear',
             'email' => 'shahrearfaiyaz@gmail.com',
             'nid' => '021556231322',
@@ -26,10 +25,6 @@ class AdminsTableSeeder extends Seeder
             'profit' => '500',
             'dob' => '11-1-1995',
             'type' => 'admin',
-           
-            
-
-
             'password' => '12345678',
             'created_at' => now(),
             'updated_at' => now()

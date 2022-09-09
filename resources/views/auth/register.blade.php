@@ -2,48 +2,11 @@
 
 @section('content')
     <div class="row">
-  
-        <!-- <div class="col-md-5 ml-auto">
-            <div class="info-area info-horizontal mt-5">
-                <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ __('Marketing') }}</h3>
-                    <p class="description">
-                        {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
-                    </p>
-                </div>
-            </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-primary">
-                    <i class="tim-icons icon-triangle-right-17"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ __('Fully Coded in HTML5') }}</h3>
-                    <p class="description">
-                        {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
-                    </p>
-                </div>
-            </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-info">
-                    <i class="tim-icons icon-trophy"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ __('Built Audience') }}</h3>
-                    <p class="description">
-                        {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
-                    </p>
-                </div>
-            </div>
-        </div> -->
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-        
+
             <div align="center" class="card card-register card-white">
                 <div class="card-header">
-                <img src="{{ asset('black') }}/img/flycash.png" alt="">
-                    <h4 align= "center" class="card-title">{{ __('Registration') }}</h4>
+                    <h5 align= "center" class="card-title">{{ __('Registration') }}</h5>
                 </div>
                 <form class="form" method="post">
                     @csrf
@@ -103,7 +66,7 @@
                             <input type="text" name="nid" class="form-control{{ $errors->has('nid') ? ' is-invalid' : '' }}" placeholder="{{ __('NID Number') }}">
                             @include('alerts.feedback', ['field' => 'nid'])
                         </div>
-                        
+
                         <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -129,13 +92,13 @@
                             @include('alerts.feedback', ['field' => 'type'])
                         </div>
                         {{session('msg')}}
-                                        
+
                         @foreach ($errors->all() as $err)
                             {{$err}}
                         @endforeach
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Get Started') }}</button>
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Register') }}</button>
                     </div>
                 </form>
             </div>

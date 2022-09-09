@@ -14,7 +14,7 @@ class CreateLoginusersTable extends Migration
     public function up()
     {
         Schema::create('loginusers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone')->unique();

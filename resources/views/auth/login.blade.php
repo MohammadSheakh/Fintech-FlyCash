@@ -11,11 +11,10 @@
 
             <div class="card card-login card-white">
                 <div class="card-header">
-                <img src="{{ asset('black') }}/img/flycash.png" alt="">
-                    <h1 align="center" class="card-title">{{ __('Log in') }}</h1>
+                    <h5 align="center" class="card-title">{{ __('Log in') }}</h5>
                 </div>
                 {{session('msg')}}
-                                        
+
                         @foreach ($errors->all() as $err)
                             {{$err}}
                         @endforeach
@@ -49,7 +48,7 @@
                     </div>
                     <div class="pull-right">
                         <h6>
-                            <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Forgot password?') }}</a>
+                            <a href="#" class="link footer-link">{{ __('Forgot password?') }}</a>
                         </h6>
                     </div>
                 </div>

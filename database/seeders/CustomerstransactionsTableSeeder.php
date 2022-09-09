@@ -14,7 +14,7 @@ class CustomerstransactionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('customerstransactions')->insert([
+        DB::table('customertransactions')->insert([
             'email' => 'joy@gmail.com.',
             'phone' => '01749549840',
             'transaction_type' => 'Add Money',

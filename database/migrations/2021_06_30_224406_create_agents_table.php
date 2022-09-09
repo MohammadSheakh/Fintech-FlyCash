@@ -14,7 +14,7 @@ class CreateAgentsTable extends Migration
     public function up()
     {
         Schema::create('agents', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
@@ -26,7 +26,7 @@ class CreateAgentsTable extends Migration
             $table->timestamp('openning_date')->nullable();
             $table->string('transaction_status');
             //$table->src('photo');
-            
+
             $table->timestamps();
         });
     }

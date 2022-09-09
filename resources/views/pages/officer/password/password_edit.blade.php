@@ -14,7 +14,7 @@
                         @if (session()->has('update'))
                             <div class="alert alert-success" role="alert">
                                 {{ session()->get('update') }}
-                            </div>  
+                            </div>
                         @endif
 
                         <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Change password') }}</button>
-                        <a href="{{route('home')}}" class="btn btn-success">Back</a>
+                        <a href="{{route('profile_edit')}}" class="btn btn-success">Back</a>
                     </div>
                 </form>
             </div>

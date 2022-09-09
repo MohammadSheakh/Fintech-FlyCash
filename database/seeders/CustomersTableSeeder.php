@@ -15,7 +15,6 @@ class CustomersTableSeeder extends Seeder
     public function run()
     {
         DB::table('customers')->insert([
-            'id' => 1,
             'name' => 'joy',
             'email' => 'joy@gmail.com',
             'nid' => '0215561321',

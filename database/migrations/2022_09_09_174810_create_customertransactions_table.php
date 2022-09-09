@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOfficerTable extends Migration
+class CreateCustomertransactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateOfficerTable extends Migration
      */
     public function up()
     {
-        Schema::create('officers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
+        Schema::create('customertransactions', function (Blueprint $table) {
+            $table->id();
             $table->string('email')->unique();
-            $table->string('password');
             $table->string('phone');
-            $table->string('nid');
-            $table->string('dob');
-            $table->string('type');
-            $table->string('image')->nullable();
+            $table->string('transaction_type');
+            $table->string('amount');
+            $table->string('balance');
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateOfficerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('officer');
+        Schema::dropIfExists('customertransactions');
     }
 }

@@ -16,7 +16,6 @@ class AgentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('agents')->insert([
-            'id' => 1,
             'name' => 'Borno',
             'email' => 'Borno@gmail.com',
             'nid' => '021556231321',
@@ -26,7 +25,7 @@ class AgentsTableSeeder extends Seeder
             'transaction_status'=>'1',
             'type' => 'agent',
             'password' => '12345678',
-           
+
             'created_at' => now(),
             'updated_at' => now()
         ]);

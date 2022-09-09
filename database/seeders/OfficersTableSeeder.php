@@ -15,7 +15,6 @@ class OfficersTableSeeder extends Seeder
     public function run()
     {
         DB::table('officers')->insert([
-            'id' => 1,
             'name' => 'Ruhul Amin',
             'email' => 'raridoy@gmail.com',
             'nid' => '3453453453',
